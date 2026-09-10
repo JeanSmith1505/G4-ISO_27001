@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO/IEC 27001 — Grupo 4</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- FONDO HUD -->
+    <div class="grid-field" aria-hidden="true"></div>
+
+    <!-- CABECERA: marca, nombre de bloque activo, barra de bloques (progreso), contador -->
+    <header class="hud-top">
+        <div class="hud-brand">ISO<span>/IEC</span> 27001</div>
+
+        <div class="hud-center">
+            <span class="hud-block-name" id="blockName">Carátula</span>
+            <div class="hud-blockbar" id="blockBar"></div>
+        </div>
+
+        <div class="hud-counter"><span id="slideNow">00</span>/<span id="slideTotal">00</span></div>
+    </header>
+
+    <!-- NAV LATERAL -->
+    <nav class="side-nav" id="sideNav" aria-label="Navegación de secciones"></nav>
+
+    <!-- FLECHAS -->
+    <div class="nav-arrows">
+        <button id="prevBtn" class="arrow-btn" aria-label="Anterior">▲</button>
+        <button id="nextBtn" class="arrow-btn" aria-label="Siguiente">▼</button>
+    </div>
+
+    <main class="track" id="track">
+
+        <!-- ============ CARÁTULA ============ -->
+        <section class="slide slide-cover" data-code="COVER" data-nav="Carátula" data-block="0">
+            <div class="cover-frame">
+                <div class="cover-top">
+                    <span class="cover-tag">UNIVERSIDAD NACIONAL JOSÉ FAUSTINO SÁNCHEZ CARRIÓN</span>
+                    <span class="cover-tag cover-tag--dim">Facultad de Ingeniería Industrial, Sistemas e
+                        Informática</span>
+                </div>
+
+                <div class="cover-core">
+                    <p class="cover-kicker">Escuela Profesional de Ingeniería de Sistemas</p>
+                    <h1 class="cover-title">ISO/IEC 27001</h1>
+                    <p class="cover-subtitle">Sistema de Gestión de Seguridad de la Información</p>
+                    <div class="cover-rule"></div>
+                    <p class="cover-course">Curso: <span class="edit-me">[Nombre del curso]</span> &nbsp;·&nbsp;
+                        Docente: <span class="edit-me">[Nombre del docente]</span></p>
+                </div>
+
+                <div class="cover-bottom">
+                    <div class="cover-group">
+                        <span class="cover-group-label">Integrantes — Grupo 4</span>
+                        <ul class="cover-names">
+                            <li><span class="edit-me">Apellidos y nombres — Integrante 1</span></li>
+                            <li><span class="edit-me">Apellidos y nombres — Integrante 2</span></li>
+                            <li><span class="edit-me">Apellidos y nombres — Integrante 3</span></li>
+                            <li><span class="edit-me">Apellidos y nombres — Integrante 4</span></li>
+                            <li><span class="edit-me">Apellidos y nombres — Integrante 5</span></li>
+                            <li><span class="edit-me">Apellidos y nombres — Integrante 6</span></li>
+                        </ul>
+                    </div>
+                    <div class="cover-place">
+                        <span class="edit-me">Huacho, Perú</span>
+                        <span class="edit-me">2026</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ BLOQUE 1 ============ -->
+        <section class="slide slide-block" data-code="BLOQUE-01" data-nav="Bloque I" data-block="1"
+            style="--block-accent: var(--cyan);">
+            <span class="block-index">01</span>
+            <div class="block-body">
+                <span class="block-eyebrow">Bloque I</span>
+                <h2 class="block-title">Fundamentos</h2>
+                <p class="block-desc">De dónde viene la norma, quién la respalda y qué busca resolver antes de entrar en
+                    su contenido técnico. Esta base conceptual es indispensable para entender por qué la norma está
+                    estructurada como lo está.</p>
+                <ol class="block-list">
+                    <li><span>01</span>¿Qué es ISO/IEC 27001?</li>
+                    <li><span>02</span>Historia y evolución</li>
+                    <li><span>03</span>Organismo emisor</li>
+                    <li><span>04</span>Objetivo general</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 1 -->
+        <section class="slide slide-content layout-split" data-code="DEF-01" data-nav="01 · Definición" data-block="1">
+            <div class="content-col content-text">
+                <span class="content-code">DEF · 01</span>
+                <h3 class="content-title">¿Qué es ISO/IEC 27001?</h3>
+                <p class="content-lead">Es la norma internacional que establece los requisitos formales para
+                    implementar, mantener y mejorar un Sistema de Gestión de Seguridad de la Información (SGSI) dentro
+                    de una organización.</p>
+                <ul class="content-points">
+                    <li>Publicada conjuntamente por <strong>ISO</strong> (Organización Internacional de Normalización) e
+                        <strong>IEC</strong> (Comisión Electrotécnica Internacional).
+                    </li>
+                    <li>Forma parte de la familia de normas <strong>ISO/IEC 27000</strong>.</li>
+                    <li>Es aplicable a cualquier organización, sin importar su tamaño, sector o país.</li>
+                    <li>Versión vigente: <strong>ISO/IEC 27001:2022</strong>.</li>
+                </ul>
+                <div class="insight-box">
+                    <span class="insight-icon">i</span>
+                    <p>El objetivo no es eliminar el riesgo por completo, sino <strong>gestionarlo a un nivel
+                            aceptable</strong> para la organización.</p>
+                </div>
+            </div>
+            <div class="content-col content-media">
+                <div class="img-frame" data-filename="imagen1.jpg">
+                    <img class="frame-img" src="assets/img/imagen1.jpg"
+                        alt="Imagen ilustrativa: definición de ISO 27001">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2 -->
+        <section class="slide slide-content layout-timeline" data-code="HIS-02" data-nav="02 · Historia" data-block="1">
+            <div class="content-head">
+                <span class="content-code">HIS · 02</span>
+                <h3 class="content-title">Historia y evolución</h3>
+                <p class="content-lead">La norma nació como un estándar británico y fue madurando junto con la
+                    digitalización de las organizaciones, hasta convertirse en la referencia internacional que es hoy.
+                </p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-track"></div>
+                <div class="timeline-item"><span class="timeline-year">1995</span>
+                    <p><strong>BS 7799</strong> — primer estándar británico de seguridad de la información.</p>
+                </div>
+                <div class="timeline-item"><span class="timeline-year">2000</span>
+                    <p>ISO adopta la primera parte como <strong>ISO/IEC 17799</strong>.</p>
+                </div>
+                <div class="timeline-item"><span class="timeline-year">2005</span>
+                    <p>Primera publicación oficial de <strong>ISO/IEC 27001</strong>.</p>
+                </div>
+                <div class="timeline-item"><span class="timeline-year">2013</span>
+                    <p>Segunda edición, alineada a la estructura común <strong>Anexo SL</strong>.</p>
+                </div>
+                <div class="timeline-item"><span class="timeline-year">2022</span>
+                    <p>Edición vigente — Anexo A reorganizado en <strong>93 controles</strong>.</p>
+                </div>
+            </div>
+            <div class="insight-box">
+                <span class="insight-icon">i</span>
+                <p>El estándar británico original nació de la necesidad de las empresas de <strong>demostrar buenas
+                        prácticas de seguridad</strong> ante sus propios clientes.</p>
+            </div>
+            <div class="img-frame img-frame--wide" data-filename="imagen2.jpg">
+                <img class="frame-img" src="assets/img/imagen2.jpg" alt="Imagen ilustrativa: línea de tiempo ISO 27001">
+            </div>
+        </section>
+
+        <!-- 3 -->
+        <section class="slide slide-content layout-split reverse" data-code="ORG-03" data-nav="03 · Organismo emisor"
+            data-block="1">
+            <div class="content-col content-media">
+                <div class="img-frame" data-filename="imagen3.jpg">
+                    <img class="frame-img" src="assets/img/imagen3.jpg" alt="Imagen ilustrativa: ISO e IEC">
+                </div>
+            </div>
+            <div class="content-col content-text">
+                <span class="content-code">ORG · 03</span>
+                <h3 class="content-title">Organismo emisor</h3>
+                <p class="content-lead">La norma es sostenida por dos organismos internacionales de normalización y un
+                    comité técnico especializado que la revisa periódicamente.</p>
+                <ul class="content-points">
+                    <li><strong>ISO</strong>: red de institutos de normalización de más de 170 países.</li>
+                    <li><strong>IEC</strong>: organismo internacional de normas eléctricas y electrónicas.</li>
+                    <li>Comité conjunto <strong>ISO/IEC JTC 1/SC 27</strong>, encargado de seguridad de la información.
+                    </li>
+                    <li>La norma se revisa y actualiza periódicamente (cada 5 a 8 años aprox.).</li>
+                </ul>
+                <div class="insight-box">
+                    <span class="insight-icon">i</span>
+                    <p>El comité SC 27 reúne a expertos de decenas de países que actualizan la norma <strong>por
+                            consenso técnico</strong>, no por decisión de una sola entidad.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4 -->
+        <section class="slide slide-content layout-stats" data-code="OBJ-04" data-nav="04 · Objetivo general"
+            data-block="1">
+            <div class="content-head">
+                <span class="content-code">OBJ · 04</span>
+                <h3 class="content-title">Objetivo general</h3>
+                <p class="content-lead">Más allá del certificado, la norma persigue un propósito concreto de gestión que
+                    impacta directamente en la operación de la organización.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card"><span class="stat-tag">Proteger</span>
+                    <p>La confidencialidad, integridad y disponibilidad de la información.</p>
+                </div>
+                <div class="stat-card"><span class="stat-tag">Reducir</span>
+                    <p>Los riesgos de seguridad mediante un enfoque sistemático y medible.</p>
+                </div>
+                <div class="stat-card"><span class="stat-tag">Generar confianza</span>
+                    <p>Ante clientes, socios comerciales y entes reguladores.</p>
+                </div>
+                <div class="stat-card"><span class="stat-tag">Certificar</span>
+                    <p>El cumplimiento mediante auditoría de un organismo acreditado.</p>
+                </div>
+            </div>
+            <div class="insight-box">
+                <span class="insight-icon">i</span>
+                <p>Un SGSI bien implementado no elimina los incidentes, pero <strong>reduce su frecuencia y su
+                        impacto</strong> cuando ocurren.</p>
+            </div>
+            <div class="img-frame img-frame--wide" data-filename="imagen4.jpg">
+                <img class="frame-img" src="assets/img/imagen4.jpg" alt="Imagen ilustrativa: objetivo de ISO 27001">
+            </div>
+        </section>
+
+        <!-- ============ BLOQUE 2 ============ -->
+        <section class="slide slide-block" data-code="BLOQUE-02" data-nav="Bloque II" data-block="2"
+            style="--block-accent: var(--amber);">
+            <span class="block-index">02</span>
+            <div class="block-body">
+                <span class="block-eyebrow">Bloque II</span>
+                <h2 class="block-title">Marco conceptual</h2>
+                <p class="block-desc">La familia de normas a la que pertenece, sus rasgos distintivos y el tipo de
+                    información que protege. Este bloque sienta el vocabulario que se usará en el resto de la
+                    presentación.</p>
+                <ol class="block-list">
+                    <li><span>05</span>Familia ISO/IEC 27000</li>
+                    <li><span>06</span>Características principales</li>
+                    <li><span>07</span>Tríada CIA</li>
+                    <li><span>08</span>Tipos de información protegida</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 5 -->
+        <section class="slide slide-content layout-table" data-code="CLS-05" data-nav="05 · Clasificación"
+            data-block="2">
+            <div class="content-head">
+                <span class="content-code">CLS · 05</span>
+                <h3 class="content-title">La familia ISO/IEC 27000</h3>
+                <p class="content-lead">ISO 27001 no está sola: pertenece a un conjunto de normas relacionadas, cada una
+                    con un rol distinto dentro de la gestión de la seguridad.</p>
+            </div>
+            <div class="table-list">
+                <div class="table-row"><span class="table-key">27000</span><span class="table-val">Vocabulario y visión
+                        general del conjunto de normas.</span></div>
+                <div class="table-row table-row--accent"><span class="table-key">27001</span><span
+                        class="table-val">Requisitos del SGSI — es la norma certificable.</span></div>
+                <div class="table-row"><span class="table-key">27002</span><span class="table-val">Código de buenas
+                        prácticas y catálogo de controles.</span></div>
+                <div class="table-row"><span class="table-key">27005</span><span class="table-val">Gestión de riesgos de
+                        seguridad de la información.</span></div>
+                <div class="table-row"><span class="table-key">27017/18</span><span class="table-val">Seguridad y
+                        privacidad en servicios en la nube.</span></div>
+                <div class="table-row"><span class="table-key">27701</span><span class="table-val">Extensión para
+                        gestión de la privacidad (PIMS).</span></div>
+            </div>
+            <div class="insight-box">
+                <span class="insight-icon">i</span>
+                <p>Conviene tener clara esta jerarquía: evita confundir <strong>qué norma es certificable</strong> y
+                    cuál es solo una guía de apoyo.</p>
+            </div>
+            <div class="img-frame" data-filename="imagen5.jpg">
+                <img class="frame-img" src="assets/img/imagen5.jpg"
+                    alt="Imagen ilustrativa: familia de normas ISO 27000">
+            </div>
+        </section>
+
+        <!-- 6 -->
+        <section class="slide slide-content layout-split" data-code="CAR-06" data-nav="06 · Características"
+            data-block="2">
+            <div class="content-col content-text">
+                <span class="content-code">CAR · 06</span>
+                <h3 class="content-title">Características principales</h3>
+                <p class="content-lead">Rasgos que distinguen a ISO 27001 de un simple listado de buenas prácticas
+                    técnicas.</p>
+                <ul class="content-points">
+                    <li>Enfoque basado en <strong>riesgos</strong>, no en una lista fija de tareas.</li>
+                    <li>Aplica un ciclo de <strong>mejora continua</strong>.</li>
+                    <li>Es <strong>certificable</strong> por un organismo externo independiente.</li>
+                    <li>Compatible con otras normas de gestión (ISO 9001, ISO 22301).</li>
+                    <li>Exige <strong>evidencia documentada</strong>: políticas, registros y procedimientos.</li>
+                </ul>
+                <div class="insight-box">
+                    <span class="insight-icon">i</span>
+                    <p>A diferencia de una checklist técnica, la norma pide <strong>justificar por qué</strong> se
+                        eligió — o se descartó — cada control.</p>
+                </div>
+            </div>
+            <div class="content-col content-media">
+                <div class="img-frame" data-filename="imagen6.jpg">
+                    <img class="frame-img" src="assets/img/imagen6.jpg"
+                        alt="Imagen ilustrativa: características de ISO 27001">
+                </div>
+            </div>
+        </section>
+
+        <!-- 7 -->
+        <section class="slide slide-content layout-triad" data-code="CIA-07" data-nav="07 · Tríada CIA" data-block="2">
+            <div class="content-head">
+                <span class="content-code">CIA · 07</span>
+                <h3 class="content-title">La tríada CIA</h3>
+                <p class="content-lead">Los tres pilares que todo control de la norma busca sostener, sea cual sea su
+                    naturaleza técnica u organizacional.</p>
+            </div>
+            <div class="triad-grid">
+                <div class="triad-card" style="--c: var(--cyan);">
+                    <span class="triad-letter">C</span>
+                    <h4>Confidencialidad</h4>
+                    <p>La información solo es accesible para quienes están autorizados a conocerla.</p>
+                </div>
+                <div class="triad-card" style="--c: var(--amber);">
+                    <span class="triad-letter">I</span>
+                    <h4>Integridad</h4>
+                    <p>La información es exacta, completa y no ha sido alterada de forma indebida.</p>
+                </div>
+                <div class="triad-card" style="--c: var(--violet);">
+                    <span class="triad-letter">D</span>
+                    <h4>Disponibilidad</h4>
+                    <p>La información está accesible cuando una persona autorizada la necesita.</p>
+                </div>
+            </div>
+            <div class="insight-box">
+                <span class="insight-icon">i</span>
+                <p>Al diseñar un control, siempre debería poder explicarse <strong>a cuál de estos tres pilares</strong>
+                    protege exactamente.</p>
+            </div>
+            <div class="img-frame img-frame--wide" data-filename="imagen7.jpg">
+                <img class="frame-img" src="assets/img/imagen7.jpg" alt="Imagen ilustrativa: tríada CIA">
+            </div>
+        </section>
+
+        <!-- 8 -->
+        <section class="slide slide-content layout-split reverse" data-code="TIP-08"
+            data-nav="08 · Tipos de información" data-block="2">
+            <div class="content-col content-media">
+                <div class="img-frame" data-filename="imagen8.jpg">
+                    <img class="frame-img" src="assets/img/imagen8.jpg"
+                        alt="Imagen ilustrativa: tipos de información protegida">
+                </div>
+            </div>
+            <div class="content-col content-text">
+                <span class="content-code">TIP · 08</span>
+                <h3 class="content-title">Tipos de información protegida</h3>
+                <p class="content-lead">El SGSI no protege solo archivos digitales: abarca cualquier forma en la que
+                    exista información valiosa para la organización.</p>
+                <ul class="content-points">
+                    <li><strong>Digital:</strong> bases de datos, correos electrónicos, copias de respaldo.</li>
+                    <li><strong>Física:</strong> documentos impresos, contratos, expedientes.</li>
+                    <li><strong>En tránsito:</strong> datos que viajan por redes, APIs o servicios en la nube.</li>
+                    <li><strong>Intangible:</strong> conocimiento, credenciales y activos de propiedad intelectual.</li>
+                </ul>
+                <div class="insight-box">
+                    <span class="insight-icon">i</span>
+                    <p>Muchas organizaciones subestiman el riesgo de la información <strong>física e intangible</strong>
+                        frente a la puramente digital.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ BLOQUE 3 ============ -->
+        <section class="slide slide-block" data-code="BLOQUE-03" data-nav="Bloque III" data-block="3"
+            style="--block-accent: var(--violet);">
+            <span class="block-index">03</span>
+            <div class="block-body">
+                <span class="block-eyebrow">Bloque III</span>
+                <h2 class="block-title">Alcance y estructura</h2>
+                <p class="block-desc">Dónde aplica la norma dentro de una organización y cómo está organizada por
+                    dentro, desde sus cláusulas obligatorias hasta el catálogo de controles del Anexo A.</p>
+                <ol class="block-list">
+                    <li><span>09</span>Alcance y aplicabilidad</li>
+                    <li><span>10</span>Estructura de la norma</li>
+                    <li><span>11</span>Anexo A: dominios de control</li>
+                    <li><span>12</span>Categorías de controles</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 9 -->
+        <section class="slide slide-content layout-stats" data-code="ALC-09" data-nav="09 · Alcance" data-block="3">
+            <div class="content-head">
+                <span class="content-code">ALC · 09</span>
+                <h3 class="content-title">Alcance y aplicabilidad</h3>
+                <p class="content-lead">La norma es deliberadamente flexible: cada organización define su propio alcance
+                    según su realidad operativa.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card"><span class="stat-tag">Empresas privadas</span>
+                    <p>De cualquier tamaño, desde pymes hasta corporaciones.</p>
+                </div>
+                <div class="stat-card"><span class="stat-tag">Entidades públicas</span>
+                    <p>Instituciones de gobierno y organismos estatales.</p>
+                </div>
+                <div class="stat-card"><span class="stat-tag">Proveedores TI</span>
+                    <p>Centros de datos, software y servicios en la nube.</p>
+                </div>
+                <div class="stat-card"><span class="stat-tag">Otros sectores</span>
+                    <p>Universidades, ONGs e instituciones financieras.</p>
+                </div>
+            </div>
+            <div class="insight-box">
+                <span class="insight-icon">i</span>
+                <p>Un alcance mal definido —demasiado amplio o demasiado angosto— es una de las causas más comunes de
+                    <strong>fallo en la certificación</strong>.
+                </p>
+            </div>
+            <p class="content-note">El alcance real se formaliza en la <strong>Declaración de Aplicabilidad
+                    (SoA)</strong>.</p>
+            <div class="img-frame img-frame--wide" data-filename="imagen9.jpg">
+                <img class="frame-img" src="assets/img/imagen9.jpg" alt="Imagen ilustrativa: alcance de aplicación">
+            </div>
+        </section>
+
+        <!-- 10 -->
+        <section class="slide slide-content layout-steps" data-code="EST-10" data-nav="10 · Estructura" data-block="3">
+            <div class="content-head">
+                <span class="content-code">EST · 10</span>
+                <h3 class="content-title">Estructura de la norma</h3>
+                <p class="content-lead">Las cláusulas 4 a 10 siguen la estructura común de alto nivel (Anexo SL) que
+                    comparten todas las normas ISO de gestión.</p>
+            </div>
+            <ol class="steps-list">
+                <li><span class="step-n">4</span>
+                    <div>
+                        <h4>Contexto de la organización</h4>
+                        <p>Entender el entorno interno y externo, y las partes interesadas.</p>
+                    </div>
+                </li>
+                <li><span class="step-n">5</span>
+                    <div>
+                        <h4>Liderazgo</h4>
+                        <p>Compromiso de la alta dirección y política de seguridad.</p>
+                    </div>
+                </li>
+                <li><span class="step-n">6</span>
+                    <div>
+                        <h4>Planificación</h4>
+                        <p>Tratamiento de riesgos y objetivos de seguridad.</p>
+                    </div>
+                </li>
+                <li><span class="step-n">7</span>
+                    <div>
+                        <h4>Soporte</h4>
+                        <p>Recursos, competencias, comunicación y documentación.</p>
+                    </div>
+                </li>
+                <li><span class="step-n">8</span>
+                    <div>
+                        <h4>Operación</h4>
+                        <p>Ejecución de los procesos y controles planificados.</p>
+                    </div>
+                </li>
+                <li><span class="step-n">9</span>
+                    <div>
+                        <h4>Evaluación del desempeño</h4>
+                        <p>Monitoreo, auditoría interna y revisión por la dirección.</p>
+                    </div>
+                </li>
+                <li><span class="step-n">10</span>
+                    <div>
+                        <h4>Mejora</h4>
+                        <p>Corrección de no conformidades y mejora continua.</p>
+                    </div>
+                </li>
+            </ol>
+            <div class="insight-box">
+                <span class="insight-icon">i</span>
+                <p>Estas siete cláusulas son obligatorias: a diferencia del Anexo A, aquí <strong>no existe la opción de
+                        excluir</strong> requisitos.</p>
+            </div>
+            <div class="img-frame" data-filename="imagen10.jpg">
+                <img class="frame-img" src="assets/img/imagen10.jpg" alt="Imagen ilustrativa: estructura de la norma">
+            </div>
+        </section>
+
+        <!-- 11 -->
+        <section class="slide slide-content layout-split" data-code="ANX-11" data-nav="11 · Anexo A" data-block="3">
+            <div class="content-col content-text">
+                <span class="content-code">ANX · 11</span>
+                <h3 class="content-title">Anexo A: dominios de control</h3>
+                <p class="content-lead">Un catálogo de referencia con los controles que una organización puede
+                    seleccionar según sus riesgos identificados.</p>
+                <ul class="content-points">
+                    <li>En la versión 2022 contiene <strong>93 controles</strong>.</li>
+                    <li>Reemplaza la estructura previa de 14 dominios (versión 2013).</li>
+                    <li>Ningún control es obligatorio en sí mismo: se justifica su inclusión o exclusión en la SoA.</li>
+                    <li>Cada control incluye atributos: tipo, propiedades de seguridad, conceptos y capacidades.</li>
+                </ul>
+                <div class="insight-box">
+                    <span class="insight-icon">i</span>
+                    <p>El Anexo A funciona como un <strong>menú de referencia</strong>, no como una lista de tareas que
+                        deban cumplirse todas.</p>
+                </div>
+            </div>
+            <div class="content-col content-media">
+                <div class="img-frame" data-filename="imagen11.jpg">
+                    <img class="frame-img" src="assets/img/imagen11.jpg" alt="Imagen ilustrativa: Anexo A">
+                </div>
+            </div>
+        </section>
+
+        <!-- 12 -->
+        <section class="slide slide-content layout-stats" data-code="CAT-12" data-nav="12 · Categorías de control"
+            data-block="3">
+            <div class="content-head">
+                <span class="content-code">CAT · 12</span>
+                <h3 class="content-title">Categorías de controles</h3>
+                <p class="content-lead">Los 93 controles del Anexo A se agrupan en cuatro grandes categorías, según su
+                    naturaleza.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card"><span class="stat-tag">Organizacionales · 37</span>
+                    <p>Políticas, roles, gestión de proveedores y cumplimiento.</p>
+                </div>
+                <div class="stat-card"><span class="stat-tag">Personas · 8</span>
+                    <p>Contratación, capacitación y acuerdos de confidencialidad.</p>
+                </div>
+                <div class="stat-card"><span class="stat-tag">Físicos · 14</span>
+                    <p>Control de accesos, equipos y perímetros seguros.</p>
+                </div>
+                <div class="stat-card"><span class="stat-tag">Tecnológicos · 34</span>
+                    <p>Criptografía, redes, malware y copias de seguridad.</p>
+                </div>
+            </div>
+            <div class="insight-box">
+                <span class="insight-icon">i</span>
+                <p>El mayor peso está en los controles <strong>tecnológicos y organizacionales</strong>, reflejo de
+                    dónde suele concentrarse el riesgo actual.</p>
+            </div>
+            <div class="img-frame img-frame--wide" data-filename="imagen12.jpg">
+                <img class="frame-img" src="assets/img/imagen12.jpg" alt="Imagen ilustrativa: categorías de controles">
+            </div>
+        </section>
+
+        <!-- ============ BLOQUE 4 ============ -->
+        <section class="slide slide-block" data-code="BLOQUE-04" data-nav="Bloque IV" data-block="4"
+            style="--block-accent: var(--cyan);">
+            <span class="block-index">04</span>
+            <div class="block-body">
+                <span class="block-eyebrow">Bloque IV</span>
+                <h2 class="block-title">Gestión del sistema</h2>
+                <p class="block-desc">El sistema que sostiene todo lo anterior: qué es el SGSI, cómo mejora con el
+                    tiempo y quiénes son responsables de que funcione día a día.</p>
+                <ol class="block-list">
+                    <li><span>13</span>El SGSI</li>
+                    <li><span>14</span>Ciclo de mejora continua</li>
+                    <li><span>15</span>Roles y responsabilidades</li>
+                    <li><span>16</span>Gestión de riesgos</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 13 -->
+        <section class="slide slide-content layout-split reverse" data-code="SGSI-13" data-nav="13 · El SGSI"
+            data-block="4">
+            <div class="content-col content-media">
+                <div class="img-frame" data-filename="imagen13.jpg">
+                    <img class="frame-img" src="assets/img/imagen13.jpg" alt="Imagen ilustrativa: SGSI">
+                </div>
+            </div>
+            <div class="content-col content-text">
+                <span class="content-code">SGSI · 13</span>
+                <h3 class="content-title">El SGSI</h3>
+                <p class="content-lead">El Sistema de Gestión de Seguridad de la Información es el corazón de la norma:
+                    no es un documento, es un sistema vivo.</p>
+                <ul class="content-points">
+                    <li>Conjunto de políticas, procesos, procedimientos y controles interrelacionados.</li>
+                    <li>Gestiona los riesgos de seguridad de forma continua, no como evento único.</li>
+                    <li>Involucra a personas, tecnología y procesos de negocio.</li>
+                    <li>Requiere el compromiso explícito de la alta dirección.</li>
+                </ul>
+                <div class="insight-box">
+                    <span class="insight-icon">i</span>
+                    <p>El error más común es tratar al SGSI como <strong>papeleo para la auditoría</strong>, en vez de
+                        una práctica de gestión diaria.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 14 -->
+        <section class="slide slide-content layout-steps" data-code="PDCA-14" data-nav="14 · Ciclo PDCA" data-block="4">
+            <div class="content-head">
+                <span class="content-code">PDCA · 14</span>
+                <h3 class="content-title">Ciclo de mejora continua</h3>
+                <p class="content-lead">El SGSI se sostiene en un ciclo que nunca se detiene: cada vuelta deja al
+                    sistema un poco más maduro que la anterior.</p>
+            </div>
+            <ol class="steps-list steps-list--loop">
+                <li><span class="step-n">P</span>
+                    <div>
+                        <h4>Plan</h4>
+                        <p>Identificar riesgos y planificar los controles necesarios.</p>
+                    </div>
+                </li>
+                <li><span class="step-n">D</span>
+                    <div>
+                        <h4>Do</h4>
+                        <p>Implementar y operar el SGSI de acuerdo a lo planificado.</p>
+                    </div>
+                </li>
+                <li><span class="step-n">C</span>
+                    <div>
+                        <h4>Check</h4>
+                        <p>Monitorear, medir y auditar el desempeño del sistema.</p>
+                    </div>
+                </li>
+                <li><span class="step-n">A</span>
+                    <div>
+                        <h4>Act</h4>
+                        <p>Corregir desviaciones y mejorar continuamente el SGSI.</p>
+                    </div>
+                </li>
+            </ol>
+            <div class="insight-box">
+                <span class="insight-icon">i</span>
+                <p>Este ciclo es el motor detrás de la cláusula 10 (mejora): sin él, la certificación <strong>se congela
+                        en el tiempo</strong>.</p>
+            </div>
+            <div class="img-frame" data-filename="imagen14.jpg">
+                <img class="frame-img" src="assets/img/imagen14.jpg" alt="Imagen ilustrativa: ciclo PDCA">
+            </div>
+        </section>
+
+        <!-- 15 -->
+        <section class="slide slide-content layout-split" data-code="ROL-15" data-nav="15 · Roles" data-block="4">
+            <div class="content-col content-text">
+                <span class="content-code">ROL · 15</span>
+                <h3 class="content-title">Roles y responsabilidades</h3>
+                <p class="content-lead">Un SGSI eficaz reparte responsabilidades claras en toda la organización, no solo
+                    en el área de tecnología.</p>
+                <ul class="content-points">
+                    <li><strong>Alta dirección:</strong> aprueba la política y asigna recursos.</li>
+                    <li><strong>Oficial de Seguridad (CISO):</strong> coordina el día a día del SGSI.</li>
+                    <li><strong>Comité de seguridad:</strong> revisa riesgos e incidentes relevantes.</li>
+                    <li><strong>Colaboradores:</strong> cumplen las políticas y reportan incidentes.</li>
+                    <li><strong>Auditor interno:</strong> verifica el cumplimiento de forma independiente.</li>
+                </ul>
+                <div class="insight-box">
+                    <span class="insight-icon">i</span>
+                    <p>La seguridad de la información deja de ser "solo un tema de TI" cuando estos roles quedan
+                        <strong>claramente definidos</strong>.
+                    </p>
+                </div>
+            </div>
+            <div class="content-col content-media">
+                <div class="img-frame" data-filename="imagen15.jpg">
+                    <img class="frame-img" src="assets/img/imagen15.jpg" alt="Imagen ilustrativa: roles del SGSI">
+                </div>
+            </div>
+        </section>
+
+        <!-- 16 -->
+        <section class="slide slide-content layout-steps" data-code="RIE-16" data-nav="16 · Gestión de riesgos"
+            data-block="4">
+            <div class="content-head">
+                <span class="content-code">RIE · 16</span>
+                <h3 class="content-title">Gestión y análisis de riesgos</h3>
+                <p class="content-lead">El núcleo metodológico de la norma: nada se controla si antes no se ha evaluado
+                    su riesgo de forma estructurada.</p>
+            </div>
+            <ol class="steps-list">
+                <li><span class="step-n">1</span>
+                    <div>
+                        <h4>Identificar activos</h4>
+                        <p>Reconocer qué información y recursos deben protegerse.</p>
+                    </div>
+                </li>
+                <li><span class="step-n">2</span>
+                    <div>
+                        <h4>Identificar amenazas</h4>
+                        <p>Detectar amenazas y vulnerabilidades sobre esos activos.</p>
+                    </div>
+                </li>
+                <li><span class="step-n">3</span>
+                    <div>
+                        <h4>Evaluar</h4>
+                        <p>Estimar probabilidad e impacto de cada riesgo.</p>
+                    </div>
+                </li>
+                <li><span class="step-n">4</span>
+                    <div>
+                        <h4>Tratar</h4>
+                        <p>Evitar, mitigar, transferir o aceptar el riesgo.</p>
+                    </div>
+                </li>
+            </ol>
+            <div class="insight-box">
+                <span class="insight-icon">i</span>
+                <p>La metodología debe quedar documentada para que el análisis sea <strong>repetible</strong>, no
+                    intuitivo ni dependiente de una sola persona.</p>
+            </div>
+            <div class="img-frame" data-filename="imagen16.jpg">
+                <img class="frame-img" src="assets/img/imagen16.jpg" alt="Imagen ilustrativa: gestión de riesgos">
+            </div>
+        </section>
+
+        <!-- ============ BLOQUE 5 ============ -->
+        <section class="slide slide-block" data-code="BLOQUE-05" data-nav="Bloque V" data-block="5"
+            style="--block-accent: var(--amber);">
+            <span class="block-index">05</span>
+            <div class="block-body">
+                <span class="block-eyebrow">Bloque V</span>
+                <h2 class="block-title">Implementación y certificación</h2>
+                <p class="block-desc">Las reglas obligatorias, el camino paso a paso y el proceso de auditoría
+                    necesarios para obtener y mantener el certificado.</p>
+                <ol class="block-list">
+                    <li><span>17</span>Reglas para certificarse</li>
+                    <li><span>18</span>Proceso de implementación</li>
+                    <li><span>19</span>Auditoría y certificación</li>
+                    <li><span>20</span>Vigencia y no conformidades</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 17 -->
+        <section class="slide slide-content layout-table" data-code="REQ-17" data-nav="17 · Reglas" data-block="5">
+            <div class="content-head">
+                <span class="content-code">REQ · 17</span>
+                <h3 class="content-title">Reglas y requisitos para certificarse</h3>
+                <p class="content-lead">Condiciones mínimas obligatorias que la norma exige antes de que una
+                    organización pueda pasar por una auditoría de certificación.</p>
+            </div>
+            <div class="table-list">
+                <div class="table-row"><span class="table-key">01</span><span class="table-val">Definir por escrito el
+                        alcance del SGSI.</span></div>
+                <div class="table-row"><span class="table-key">02</span><span class="table-val">Contar con una Política
+                        de Seguridad de la Información aprobada.</span></div>
+                <div class="table-row table-row--accent"><span class="table-key">03</span><span
+                        class="table-val">Realizar la evaluación y el tratamiento de riesgos, documentados.</span></div>
+                <div class="table-row"><span class="table-key">04</span><span class="table-val">Elaborar la Declaración
+                        de Aplicabilidad (SoA).</span></div>
+                <div class="table-row"><span class="table-key">05</span><span class="table-val">Mantener registros y
+                        evidencias de que los controles operan.</span></div>
+                <div class="table-row"><span class="table-key">06</span><span class="table-val">Ejecutar auditorías
+                        internas y revisión por la dirección.</span></div>
+            </div>
+            <div class="insight-box">
+                <span class="insight-icon">i</span>
+                <p>Ninguno de estos puntos es opcional: su ausencia es <strong>motivo directo de no conformidad</strong>
+                    en la auditoría.</p>
+            </div>
+            <div class="img-frame" data-filename="imagen17.jpg">
+                <img class="frame-img" src="assets/img/imagen17.jpg" alt="Imagen ilustrativa: reglas de certificación">
+            </div>
+        </section>
+
+        <!-- 18 -->
+        <section class="slide slide-content layout-steps" data-code="IMP-18" data-nav="18 · Implementación"
+            data-block="5">
+            <div class="content-head">
+                <span class="content-code">IMP · 18</span>
+                <h3 class="content-title">Proceso de implementación</h3>
+                <p class="content-lead">La ruta típica que sigue una organización desde el diagnóstico inicial hasta la
+                    auditoría de certificación.</p>
+            </div>
+            <ol class="steps-list steps-list--compact">
+                <li><span class="step-n">1</span>
+                    <div>
+                        <h4>Diagnóstico inicial</h4>
+                        <p>Análisis de brechas (gap analysis) frente a la norma.</p>
+                    </div>
+                </li>
+                <li><span class="step-n">2</span>
+                    <div>
+                        <h4>Alcance y política</h4>
+                        <p>Definir el alcance del SGSI y la política de seguridad.</p>
+                    </div>
+                </li>
+                <li><span class="step-n">3</span>
+                    <div>
+                        <h4>Evaluar riesgos</h4>
+                        <p>Identificar y valorar riesgos sobre los activos de información.</p>
+                    </div>
+                </li>
+                <li><span class="step-n">4</span>
+                    <div>
+                        <h4>Implementar controles</h4>
+                        <p>Seleccionar y poner en marcha los controles del Anexo A.</p>
+                    </div>
+                </li>
+                <li><span class="step-n">5</span>
+                    <div>
+                        <h4>Capacitar</h4>
+                        <p>Formar al personal en las nuevas políticas y procedimientos.</p>
+                    </div>
+                </li>
+                <li><span class="step-n">6</span>
+                    <div>
+                        <h4>Auditoría interna</h4>
+                        <p>Verificar el cumplimiento antes de la auditoría externa.</p>
+                    </div>
+                </li>
+                <li><span class="step-n">7</span>
+                    <div>
+                        <h4>Revisión por dirección</h4>
+                        <p>La alta dirección evalúa el desempeño del SGSI.</p>
+                    </div>
+                </li>
+                <li><span class="step-n">8</span>
+                    <div>
+                        <h4>Auditoría de certificación</h4>
+                        <p>Evaluación final por el organismo certificador.</p>
+                    </div>
+                </li>
+            </ol>
+            <div class="insight-box">
+                <span class="insight-icon">i</span>
+                <p>El tiempo típico de implementación completa varía entre <strong>6 y 18 meses</strong>, según el
+                    tamaño y madurez de la organización.</p>
+            </div>
+            <div class="img-frame" data-filename="imagen18.jpg">
+                <img class="frame-img" src="assets/img/imagen18.jpg"
+                    alt="Imagen ilustrativa: proceso de implementación">
+            </div>
+        </section>
+
+        <!-- 19 -->
+        <section class="slide slide-content layout-split reverse" data-code="AUD-19" data-nav="19 · Auditoría"
+            data-block="5">
+            <div class="content-col content-media">
+                <div class="img-frame" data-filename="imagen19.jpg">
+                    <img class="frame-img" src="assets/img/imagen19.jpg"
+                        alt="Imagen ilustrativa: auditoría y certificación">
+                </div>
+            </div>
+            <div class="content-col content-text">
+                <span class="content-code">AUD · 19</span>
+                <h3 class="content-title">Proceso de auditoría y certificación</h3>
+                <p class="content-lead">La certificación la otorga un tercero independiente, no la organización misma.
+                </p>
+                <ul class="content-points">
+                    <li><strong>Auditoría Fase 1:</strong> revisión documental del SGSI.</li>
+                    <li><strong>Auditoría Fase 2:</strong> verificación en sitio de la implementación real.</li>
+                    <li>Realizada por un <strong>organismo de certificación acreditado</strong>.</li>
+                    <li>El certificado se emite si no existen no conformidades mayores.</li>
+                </ul>
+                <div class="insight-box">
+                    <span class="insight-icon">i</span>
+                    <p>Los auditores no evalúan la teoría: buscan <strong>evidencia de que los controles operan</strong>
+                        en el día a día.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 20 -->
+        <section class="slide slide-content layout-stats" data-code="VIG-20" data-nav="20 · Vigencia" data-block="5">
+            <div class="content-head">
+                <span class="content-code">VIG · 20</span>
+                <h3 class="content-title">Vigencia, renovación y no conformidades</h3>
+                <p class="content-lead">La certificación no es permanente: exige seguimiento y evidencia constante
+                    después de obtenida.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card"><span class="stat-tag">3 años</span>
+                    <p>Vigencia estándar del certificado ISO 27001.</p>
+                </div>
+                <div class="stat-card"><span class="stat-tag">Anual</span>
+                    <p>Auditorías de seguimiento (vigilancia) cada año.</p>
+                </div>
+                <div class="stat-card"><span class="stat-tag">No conf. menor</span>
+                    <p>Requiere un plan de acción con plazo definido.</p>
+                </div>
+                <div class="stat-card"><span class="stat-tag">No conf. mayor</span>
+                    <p>Puede suspender o retirar la certificación.</p>
+                </div>
+            </div>
+            <div class="insight-box">
+                <span class="insight-icon">i</span>
+                <p>Perder la certificación por no conformidades no revertidas puede dañar tanto la operación como la
+                    <strong>reputación</strong> de la empresa.
+                </p>
+            </div>
+            <div class="img-frame img-frame--wide" data-filename="imagen20.jpg">
+                <img class="frame-img" src="assets/img/imagen20.jpg" alt="Imagen ilustrativa: vigencia del certificado">
+            </div>
+        </section>
+
+        <!-- ============ BLOQUE 6 ============ -->
+        <section class="slide slide-block" data-code="BLOQUE-06" data-nav="Bloque VI" data-block="6"
+            style="--block-accent: var(--violet);">
+            <span class="block-index">06</span>
+            <div class="block-body">
+                <span class="block-eyebrow">Bloque VI</span>
+                <h2 class="block-title">Impacto y cierre</h2>
+                <p class="block-desc">Qué gana y qué le cuesta a una organización certificarse, cómo se compara con
+                    otros marcos, y las conclusiones finales de todo lo revisado.</p>
+                <ol class="block-list">
+                    <li><span>21</span>Ventajas y beneficios</li>
+                    <li><span>22</span>Retos y desventajas</li>
+                    <li><span>23</span>Normas relacionadas</li>
+                    <li><span>24</span>Casos y conclusiones</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 21 -->
+        <section class="slide slide-content layout-split" data-code="VEN-21" data-nav="21 · Ventajas" data-block="6">
+            <div class="content-col content-text">
+                <span class="content-code">VEN · 21</span>
+                <h3 class="content-title">Ventajas y beneficios</h3>
+                <p class="content-lead">Razones por las que muchas organizaciones deciden invertir en certificarse, más
+                    allá del cumplimiento normativo.</p>
+                <ul class="content-points">
+                    <li>Reduce la probabilidad y el impacto de incidentes de seguridad.</li>
+                    <li>Genera confianza ante clientes, socios y reguladores.</li>
+                    <li>Facilita el cumplimiento legal, como la protección de datos personales.</li>
+                    <li>Mejora la continuidad del negocio ante incidentes.</li>
+                    <li>Puede ser un diferenciador competitivo o requisito comercial.</li>
+                </ul>
+                <div class="insight-box">
+                    <span class="insight-icon">i</span>
+                    <p>En sectores donde la norma es un requisito comercial, no certificarse puede significar
+                        <strong>quedar fuera de licitaciones</strong>.
+                    </p>
+                </div>
+            </div>
+            <div class="content-col content-media">
+                <div class="img-frame" data-filename="imagen21.jpg">
+                    <img class="frame-img" src="assets/img/imagen21.jpg"
+                        alt="Imagen ilustrativa: ventajas de la certificación">
+                </div>
+            </div>
+        </section>
+
+        <!-- 22 -->
+        <section class="slide slide-content layout-split reverse" data-code="RET-22" data-nav="22 · Retos"
+            data-block="6">
+            <div class="content-col content-media">
+                <div class="img-frame" data-filename="imagen22.jpg">
+                    <img class="frame-img" src="assets/img/imagen22.jpg"
+                        alt="Imagen ilustrativa: retos de la certificación">
+                </div>
+            </div>
+            <div class="content-col content-text">
+                <span class="content-code">RET · 22</span>
+                <h3 class="content-title">Retos y desventajas</h3>
+                <p class="content-lead">La certificación también implica un costo real que debe planificarse desde el
+                    inicio del proyecto.</p>
+                <ul class="content-points">
+                    <li>Costos de implementación, consultoría y certificación.</li>
+                    <li>Requiere tiempo y compromiso sostenido de la alta dirección.</li>
+                    <li>Puede generar una carga documental excesiva si se gestiona mal.</li>
+                    <li>Resistencia al cambio cultural dentro de la organización.</li>
+                </ul>
+                <div class="insight-box">
+                    <span class="insight-icon">i</span>
+                    <p>Automatizar la recolección de evidencias es una de las formas más efectivas de <strong>reducir la
+                            carga documental</strong>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 23 -->
+        <section class="slide slide-content layout-table" data-code="COM-23" data-nav="23 · Comparación" data-block="6">
+            <div class="content-head">
+                <span class="content-code">COM · 23</span>
+                <h3 class="content-title">Normas relacionadas y comparación</h3>
+                <p class="content-lead">ISO 27001 convive con otros marcos de seguridad ampliamente usados en el mercado
+                    internacional.</p>
+            </div>
+            <div class="table-list">
+                <div class="table-row table-row--accent"><span class="table-key">ISO 27001</span><span
+                        class="table-val">Certificable, basada en gestión de riesgos, reconocida
+                        internacionalmente.</span></div>
+                <div class="table-row"><span class="table-key">NIST CSF</span><span class="table-val">Marco de
+                        referencia (EE. UU.), no certificable, común en infraestructura crítica.</span></div>
+                <div class="table-row"><span class="table-key">SOC 2</span><span class="table-val">Informe de auditoría
+                        (EE. UU.), enfocado en proveedores de servicios y SaaS.</span></div>
+            </div>
+            <div class="insight-box">
+                <span class="insight-icon">i</span>
+                <p>Elegir entre estos marcos no es excluyente: depende del <strong>mercado y el cliente</strong> al que
+                    responde la organización.</p>
+            </div>
+            <div class="img-frame" data-filename="imagen23.jpg">
+                <img class="frame-img" src="assets/img/imagen23.jpg" alt="Imagen ilustrativa: comparación de normas">
+            </div>
+        </section>
+
+        <!-- 24 -->
+        <section class="slide slide-content layout-split" data-code="CON-24" data-nav="24 · Conclusiones"
+            data-block="6">
+            <div class="content-col content-text">
+                <span class="content-code">CON · 24</span>
+                <h3 class="content-title">Casos de aplicación y conclusiones</h3>
+                <p class="content-lead">Un cierre a lo recorrido: dónde se aplica la norma en la práctica y qué queda
+                    como idea central.</p>
+                <ul class="content-points">
+                    <li>Sectores frecuentes: banca, salud, tecnología, gobierno y telecomunicaciones.</li>
+                    <li>Empresas de servicios en la nube suelen exigirla a sus proveedores.</li>
+                    <li>ISO 27001 no es solo un certificado: es una <strong>cultura de gestión de riesgos</strong>.</li>
+                    <li>Sienta las bases de una organización resiliente ante amenazas digitales.</li>
+                </ul>
+                <div class="insight-box">
+                    <span class="insight-icon">i</span>
+                    <p>Más que un objetivo final, la certificación es un punto de partida: el SGSI debe <strong>seguir
+                            operando después</strong> de obtenerla.</p>
+                </div>
+            </div>
+            <div class="content-col content-media">
+                <div class="img-frame" data-filename="imagen24.jpg">
+                    <img class="frame-img" src="assets/img/imagen24.jpg" alt="Imagen ilustrativa: conclusiones">
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CIERRE / GRACIAS ============ -->
+        <section class="slide slide-thanks" data-code="END" data-nav="Gracias" data-block="7">
+            <div class="thanks-core">
+                <span class="thanks-code">FIN · TRANSMISIÓN</span>
+                <h2 class="thanks-title">Gracias</h2>
+                <p class="thanks-sub">ISO/IEC 27001 — Sistema de Gestión de Seguridad de la Información</p>
+                <div class="cover-rule"></div>
+                <p class="thanks-group">Grupo 4 · Ingeniería de Sistemas · UNJFSC</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
